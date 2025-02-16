@@ -1,0 +1,136 @@
+=== Link Verification Summary ===
+Time: 17/02/2025, 4:18:28 am
+Total Pages Visited: 57
+Total External Links: 5
+Total Blog Posts: 10
+
+Blog Posts:
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/cyber-security-management-best-practices-for-australian-organisations/,Security Strategy
+March 28, 2024
+Cyber Security Management: Best Practices For Australian Organisations
+Introduction Technology is evolving, and so are cybercrimes, making it necessary for organisations to proactively build a defence mechanism against cyber threats to protect their digital assets. Australian organisations are facing a rising number of cyber threats ranging from financial attacks to data hacking. Now, protecting sensitive information has become more essential than ever, and […]
+Ashwin Sharma
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/zero-trust-framework-in-australian-cyber-security/,Security Strategy
+January 11, 2024
+Zero Trust Framework In Australian Cyber Security
+Imagine, you’ve been given a once-in-a-lifetime opportunity to own a luxurious mansion at Double Bay, Sydney for free. But here’s a catch. The mansion has no locks, shutters, or security features. Will you still buy it? Absolutely, right? Because you can always install them before you move in. But what if you had to sign […]
+Ashwin Sharma
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/security-by-design-principles-how-they-shape-australian-cyber-security/,Security Strategy
+January 11, 2024
+Security By Design Principles: How They Shape Australian Cyber Security
+Secure by Design is a set of principles and practices that emphasise incorporating security measures and considerations into the foundation of a system’s design and architecture. This approach minimises vulnerabilities, threats and risks before creating the system rather than trying to patch security issues later on. In today’s digital age, where businesses, governments, and individuals […]
+Ashwin Sharma
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/secure-by-design-requirements-a-guide-for-australian-service-providers/,Security Strategy
+January 11, 2024
+Secure By Design Requirements: A Guide For Australian Service Providers
+In an era where technology is at the core of every business operation, security has become a major concern. “Secure by Design” is not just a buzzword; it’s a vital framework that emphasises building security into the fabric of technology solutions. “Secure by Design” is more than just ticking boxes to meet regulations. It’s about […]
+Ashwin Sharma
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/understanding-cyber-security-risk-management-a-guide-for-australian-businesses/,Security Strategy
+January 8, 2024
+Understanding Cyber Security Risk Management: A Guide For Australian Businesses
+Let’s face the truth: if you own a successful business, it’s likely you’re on the web. And so are zillions of hackers looking for a teeny tiny loophole that could cost you the earth. A whopping figure of 76,000 cybercrime reports made to the Australian Cybersecurity Centre in FY ’22 is a testimony to the […]
+Ashwin Sharma
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/the-importance-of-cyber-security-in-protecting-australian-enterprises/,Security Strategy
+December 22, 2023
+The Importance Of Cyber Security In Protecting Australian Enterprises
+In an era where data is the new gold and technology is the backbone of businesses, the importance of cyber security in safeguarding Australian enterprises cannot be overstated. Cyber threats pose a business risk that can have catastrophic consequences on your operations, reputation, and bottom line. Securemation understands the unique challenges faced by Australian enterprises […]
+Ashwin Sharma
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/cyber-security-in-mining-industry-risk-and-challenges/,Security Strategy
+December 15, 2023
+Cyber Security In Mining Industry: Risk And Challenges
+The industry has undergone significant digital transformation in recent years. New technologies like automation, data analytics, IoT sensors and cloud computing have led to greater efficiency and productivity. However, this increasing digitalisation also expands the cyber attack surface. As companies increasingly depend on connected technologies to manage their operations, we understand that cybersecurity in the […]
+Ashwin Sharma
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/common-cyber-security-risks-in-australia-what-you-need-to-know/,Security Strategy
+December 15, 2023
+Common Cyber Security Risks In Australia: What You Need To Know
+Australia’s Cybersecurity Landscape: Are You Prepared? As a significant increase occurs in digitization day by day, the internet has become an integral part of our daily lives, and the online digital world has helped make our life more interconnected & convenient. Along with our dependence on technology, the danger of falling victim to cyber […]
+Ashwin Sharma
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/a-devsecops-approach-will-aid-in-curbing-project-costs-2/,DevSecOps
+December 7, 2023
+A DevSecOps Approach Will Aid In Curbing Project Costs.
+We’re all well-acquainted with the concept of security incidents, and it’s become a matter of “when” rather than “if” nowadays. In the past, we used to discuss our development life cycle, but gradually we realized the need to bring the operations teams closer. This led to the creation of DevOps teams, a well-known and widely […]
+Murilo Oliveria
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/how-to-set-up-a-mobile-pen-testing-environment/,Red Teaming
+November 28, 2023
+How To Set Up A Mobile Pen Testing Environment
+Hey there, this tutorial will guide you in setting up an android virtual device (AVD) in your machine to pen test mobile applications. I will also provide some useful commands to help you in a couple of additional commands at the end that you will probably come across when doing your tests, and you can […]
+Murilo Oliveria
+No Comments
+
+Blog Posts Content:
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/cyber-security-management-best-practices-for-australian-organisations/,Security Strategy
+March 28, 2024
+Cyber Security Management: Best Practices For Australian Organisations
+Introduction Technology is evolving, and so are cybercrimes, making it necessary for organisations to proactively build a defence mechanism against cyber threats to protect their digital assets. Australian organisations are facing a rising number of cyber threats ranging from financial attacks to data hacking. Now, protecting sensitive information has become more essential than ever, and […]
+Ashwin Sharma
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/zero-trust-framework-in-australian-cyber-security/,Security Strategy
+January 11, 2024
+Zero Trust Framework In Australian Cyber Security
+Imagine, you’ve been given a once-in-a-lifetime opportunity to own a luxurious mansion at Double Bay, Sydney for free. But here’s a catch. The mansion has no locks, shutters, or security features. Will you still buy it? Absolutely, right? Because you can always install them before you move in. But what if you had to sign […]
+Ashwin Sharma
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/security-by-design-principles-how-they-shape-australian-cyber-security/,Security Strategy
+January 11, 2024
+Security By Design Principles: How They Shape Australian Cyber Security
+Secure by Design is a set of principles and practices that emphasise incorporating security measures and considerations into the foundation of a system’s design and architecture. This approach minimises vulnerabilities, threats and risks before creating the system rather than trying to patch security issues later on. In today’s digital age, where businesses, governments, and individuals […]
+Ashwin Sharma
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/secure-by-design-requirements-a-guide-for-australian-service-providers/,Security Strategy
+January 11, 2024
+Secure By Design Requirements: A Guide For Australian Service Providers
+In an era where technology is at the core of every business operation, security has become a major concern. “Secure by Design” is not just a buzzword; it’s a vital framework that emphasises building security into the fabric of technology solutions. “Secure by Design” is more than just ticking boxes to meet regulations. It’s about […]
+Ashwin Sharma
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/understanding-cyber-security-risk-management-a-guide-for-australian-businesses/,Security Strategy
+January 8, 2024
+Understanding Cyber Security Risk Management: A Guide For Australian Businesses
+Let’s face the truth: if you own a successful business, it’s likely you’re on the web. And so are zillions of hackers looking for a teeny tiny loophole that could cost you the earth. A whopping figure of 76,000 cybercrime reports made to the Australian Cybersecurity Centre in FY ’22 is a testimony to the […]
+Ashwin Sharma
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/the-importance-of-cyber-security-in-protecting-australian-enterprises/,Security Strategy
+December 22, 2023
+The Importance Of Cyber Security In Protecting Australian Enterprises
+In an era where data is the new gold and technology is the backbone of businesses, the importance of cyber security in safeguarding Australian enterprises cannot be overstated. Cyber threats pose a business risk that can have catastrophic consequences on your operations, reputation, and bottom line. Securemation understands the unique challenges faced by Australian enterprises […]
+Ashwin Sharma
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/cyber-security-in-mining-industry-risk-and-challenges/,Security Strategy
+December 15, 2023
+Cyber Security In Mining Industry: Risk And Challenges
+The industry has undergone significant digital transformation in recent years. New technologies like automation, data analytics, IoT sensors and cloud computing have led to greater efficiency and productivity. However, this increasing digitalisation also expands the cyber attack surface. As companies increasingly depend on connected technologies to manage their operations, we understand that cybersecurity in the […]
+Ashwin Sharma
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/common-cyber-security-risks-in-australia-what-you-need-to-know/,Security Strategy
+December 15, 2023
+Common Cyber Security Risks In Australia: What You Need To Know
+Australia’s Cybersecurity Landscape: Are You Prepared? As a significant increase occurs in digitization day by day, the internet has become an integral part of our daily lives, and the online digital world has helped make our life more interconnected & convenient. Along with our dependence on technology, the danger of falling victim to cyber […]
+Ashwin Sharma
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/a-devsecops-approach-will-aid-in-curbing-project-costs-2/,DevSecOps
+December 7, 2023
+A DevSecOps Approach Will Aid In Curbing Project Costs.
+We’re all well-acquainted with the concept of security incidents, and it’s become a matter of “when” rather than “if” nowadays. In the past, we used to discuss our development life cycle, but gradually we realized the need to bring the operations teams closer. This led to the creation of DevOps teams, a well-known and widely […]
+Murilo Oliveria
+No Comments
+- https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/how-to-set-up-a-mobile-pen-testing-environment/,Red Teaming
+November 28, 2023
+How To Set Up A Mobile Pen Testing Environment
+Hey there, this tutorial will guide you in setting up an android virtual device (AVD) in your machine to pen test mobile applications. I will also provide some useful commands to help you in a couple of additional commands at the end that you will probably come across when doing your tests, and you can […]
+Murilo Oliveria
+No Comments
+
+External Links:
+- internetcookies.com -> https://www.internetcookies.com/
+- Free Terms and Conditions Generator -> https://www.termsandconditionsgenerator.com/
+- 76,000 cybercrime reports made to the Australian Cybersecurity Centre in FY ’22 -> https://www.statista.com/statistics/1343645/australia-number-of-cybercrimes-reports-acsc/
+- median wealth per adult was highest in the world in 2021 -> https://www.cyber.gov.au/sites/default/files/2023-03/ACSC-Annual-Cyber-Threat-Report-2022_0.pdf
+- Securemation -> https://www.securemation.com/

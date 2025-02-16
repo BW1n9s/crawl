@@ -51,10 +51,12 @@ class LinkChecker {
                     const href = await post.getAttribute('href');
                     if (!href) continue;
                     const textContent = await post.getText();
-                    const title = text.match(/"(.*?)"/)[1];
+
+
+
                     if (!this.blogPosts.has(href)) {
-                        this.blogPosts.set(href, title);
-                        console.log(`✓ Found blog post: "${title}"`);
+                        this.blogPosts.set(href, textContent);
+                        console.log(`✓ Found blog post: "${textContent}"`);
                     }
                 } catch (error) {
                     console.error('Error processing blog post:', error.message);
@@ -134,6 +136,7 @@ class LinkChecker {
         const externalLinksArray = Array.from(this.externalLinks)
             .map(link => JSON.parse(link))
             .filter(link => !this.isSocialLink(link.url));
+        const blogPostsArray = Array.from(this.blogPosts);
 
         console.log('\n=== Link Verification Report ===');
         console.log(`Total pages visited: ${this.visitedUrls.size}`);
@@ -154,13 +157,33 @@ class LinkChecker {
             socialLinks: Array.from(this.socialLinks)
         };
 
+        const summaryReport = [
+            '=== Link Verification Summary ===',
+            `Time: ${new Date().toLocaleString()}`,
+            `Total Pages Visited: ${this.visitedUrls.size}`,
+            `Total External Links: ${externalLinksArray.length}`,
+            `Total Blog Posts: ${blogPostsArray.length}`,
+            '\nBlog Posts:',
+            ...blogPostsArray.map(url => `- ${url}`),
+            '\nBlog Posts Content:',
+            ...blogPostsArray.map((textContent) => `- ${textContent}`),
+            '\nExternal Links:',
+            ...externalLinksArray.map(link => 
+                `- ${link.text || 'No Text'} -> ${link.url}`
+            ),
+        ].join('\n');
+
         const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
         const reportFileName = `link-verification-report-${timestamp}.json`;
         const reportPath = path.join(process.cwd(), reportFileName);
+        const summaryFileName = `link-verification-summary-${timestamp}.txt`;
+        const summaryPath = path.join(process.cwd(), summaryFileName);
 
         try {
             await fs.writeFile(reportPath, JSON.stringify(report, null, 2), 'utf8');
             console.log(`\nReport has been saved to: ${reportPath}`);
+            await fs.writeFile(summaryPath, summaryReport, 'utf8');
+            console.log(`Summary report has been saved to: ${summaryPath}`);
         } catch (error) {
             console.error('Error saving report:', error);
             console.log('\nReport Data (file save failed):');
