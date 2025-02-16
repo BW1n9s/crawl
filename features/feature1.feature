@@ -1,25 +1,25 @@
-Feature: Web-Scraping
+Feature: Header Navigation Test
+  As a user
+  I want to verify all header navigation links
+  So that I can ensure they are correct and working
 
-  Scenario: Get basic page content
-    Given I open the browser
-    When I visit webpage "https://example.com"
-    Then I should get page content
-    And close the browser
-
-  Scenario: Save content to file
-    Given I open the browser
-    When I visit webpage "https://example.com"
-    Then I should get page content
-    And save content to "output.txt"
-    And close the browser
-
-  Scenario Outline: Check multiple pages
-    Given I open the browser
-    When I visit webpage "<url>"
-    Then I should get page content
-    And content should contain "<expected_text>"
-    And close the browser
+  Scenario: Verify header navigation items and their links
+    Given I am on the homepage
+    When I check the header navigation
+    Then I should see "<nav_item>" in the header
+    And the link for "<nav_item>" should point to "<expected_url>"
 
     Examples:
-      | url                  | expected_text |
-      | https://example.com  | Example       |
+      | nav_item       | expected_url           |
+      | Home          | /                      |
+      | About         | /about                 |
+      | Services      | /services              |
+      | Blogs         | /blogs                 |
+      | Clients       | /clients               |
+      | Privacy Policy| /privacy-policy        |
+      | Contact Us    | /contact               |
+
+  Scenario: Verify all navigation items are present
+    Given I am on the homepage
+    When I check the header navigation
+    Then I should see all required navigation items

@@ -1,70 +1,50 @@
-const { Given, When, Then, After, Background } = require('cucumber');
+const { Given, When, Then } = require('@cucumber/cucumber');
 const { Builder, By, until } = require('selenium-webdriver');
 const { expect } = require('chai');
-const fs = require('fs').promises;
 
 let driver;
+const expectedNavItems = [
+    'Home', 'About', 'Services', 'Blogs', 
+    'Clients', 'Privacy Policy', 'Contact Us'
+];
 
-Given('I open the browser', async function() {
-    const chrome = require('selenium-webdriver/chrome');
-    let options = new chrome.Options();
+Given('I am on the homepage', async function() {
+    driver = await new Builder().forBrowser('chrome').build();
+    await driver.get('https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/'); 
+    await driver.wait(until.elementLocated(By.css('nav')), 10000);
+});
+
+When('I check the header navigation', async function() {
+    const header = await driver.findElement(By.css('header'));
+    expect(header).to.exist;
+});
+
+Then('I should see {string} in the header', async function(navItem) {
+    const navElement = await driver.findElement(
+        By.xpath(`//nav//a[contains(text(),'${navItem}')]`)
+    );
+    expect(navElement).to.exist;
+});
+
+Then('the link for {string} should point to {string}', async function(navItem, expectedUrl) {
+    const navLink = await driver.findElement(
+        By.xpath(`//nav//a[contains(text(),'${navItem}')]`)
+    );
+    const href = await navLink.getAttribute('href');
     
-    driver = await new Builder()
-        .forBrowser('chrome')
-        .setChromeOptions(options)
-        .build();
+    expect(href).to.include(expectedUrl);
+});
+
+Then('I should see all required navigation items', async function() {
+    const navItems = await driver.findElements(By.css('nav a'));
+    const navTexts = await Promise.all(
+        navItems.map(item => item.getText())
+    );
+    expectedNavItems.forEach(item => {
+        expect(navTexts).to.include(item);
+    });
+
+    expect(navTexts.length).to.equal(expectedNavItems.length);
     
-    await driver.manage().setTimeouts({ implicit: 10000 });
-    console.log('Browser opened successfully');
-});
-
-When('I visit webpage {string}', async function(url) {
-    try {
-        await driver.get(url);
-        await driver.wait(until.elementLocated(By.tagName('body')), 10000);
-        console.log(`Successfully visited ${url}`);
-    } catch (error) {
-        console.error(`Failed to visit ${url}:`, error);
-        throw error;
-    }
-});
-
-Then('I should get page content', async function() {
-    try {
-        const bodyText = await driver.findElement(By.tagName('body')).getText();
-        expect(bodyText).to.not.be.empty;
-        this.pageContent = bodyText; // 保存内容供后续步骤使用
-        console.log('Content retrieved:', bodyText.substring(0, 100) + '...');
-    } catch (error) {
-        console.error('Failed to get content:', error);
-        throw error;
-    }
-});
-
-Then('save content to {string}', async function(filename) {
-    try {
-        await fs.writeFile(filename, this.pageContent, 'utf8');
-        console.log(`Content saved to ${filename}`);
-    } catch (error) {
-        console.error(`Failed to save content to ${filename}:`, error);
-        throw error;
-    }
-});
-
-Then('content should contain {string}', async function(expectedText) {
-    expect(this.pageContent).to.include(expectedText);
-    console.log(`Content contains expected text: ${expectedText}`);
-});
-
-Then('close the browser', async function() {
-    if (driver) {
-        await driver.quit();
-        console.log('Browser closed');
-    }
-});
-
-After(async function() {
-    if (driver) {
-        await driver.quit();
-    }
+    await driver.quit();
 });
