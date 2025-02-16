@@ -1,0 +1,38 @@
+主要网站结构：
+
+home
+
+about
+-sub 1
+-sub 2
+
+services
+-sub 1
+-...
+-sub n
+
+blogs
+
+-post 1
+-...
+-post n
+
+clients
+
+privacy policy
+
+contact us
+
+blog页的结构较为复杂，包含多个post，每个post包含多个元素，如title，author，date，content等。
+且blog页存在分页，每页显示n个post，每页的post数量可能不同。
+只需要检查blog页每个post的title及指向链接是否相符即可。
+例：
+title：Understanding Cyber Security Risk Management: A Guide for Australian Businesses
+url：/understanding-cyber-security-risk-management-a-guide-for-australian-businesses/
+
+
+post 页面标题的 full xpath：/html/body/div[2]/div[1]/div[1]/div[1]/div/h1
+
+post页面内author date catagory tag等内容指向不需要检查
+
+根据以上内容进行优化 防止在blog以及post页面中检查过多的内容

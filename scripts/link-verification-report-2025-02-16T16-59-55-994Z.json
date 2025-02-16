@@ -1,0 +1,178 @@
+{
+  "timestamp": "2025-02-16T16:59:55.993Z",
+  "summary": {
+    "totalPagesVisited": 55,
+    "totalExternalLinks": 18,
+    "totalBlogPosts": 10
+  },
+  "blogPosts": [
+    {
+      "url": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/cyber-security-management-best-practices-for-australian-organisations/",
+      "title": ""
+    },
+    {
+      "url": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/zero-trust-framework-in-australian-cyber-security/",
+      "title": ""
+    },
+    {
+      "url": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/security-by-design-principles-how-they-shape-australian-cyber-security/",
+      "title": ""
+    },
+    {
+      "url": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/secure-by-design-requirements-a-guide-for-australian-service-providers/",
+      "title": ""
+    },
+    {
+      "url": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/understanding-cyber-security-risk-management-a-guide-for-australian-businesses/",
+      "title": ""
+    },
+    {
+      "url": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/the-importance-of-cyber-security-in-protecting-australian-enterprises/",
+      "title": ""
+    },
+    {
+      "url": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/cyber-security-in-mining-industry-risk-and-challenges/",
+      "title": ""
+    },
+    {
+      "url": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/common-cyber-security-risks-in-australia-what-you-need-to-know/",
+      "title": ""
+    },
+    {
+      "url": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/a-devsecops-approach-will-aid-in-curbing-project-costs-2/",
+      "title": ""
+    },
+    {
+      "url": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/how-to-set-up-a-mobile-pen-testing-environment/",
+      "title": ""
+    }
+  ],
+  "externalLinks": [
+    {
+      "url": "https://www.facebook.com/securemation/",
+      "text": "Facebook"
+    },
+    {
+      "text": "Facebook",
+      "url": "https://www.facebook.com/securemation/",
+      "sourceUrl": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net",
+      "pageTitle": "securemation – securemation",
+      "location": {
+        "x": 1423.140625,
+        "y": 8248.453125
+      }
+    },
+    {
+      "url": "https://twitter.com/securemation/",
+      "text": "Twitter"
+    },
+    {
+      "text": "Twitter",
+      "url": "https://twitter.com/securemation/",
+      "sourceUrl": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net",
+      "pageTitle": "securemation – securemation",
+      "location": {
+        "x": 1423.140625,
+        "y": 8281.453125
+      }
+    },
+    {
+      "url": "https://www.linkedin.com/company/securemation",
+      "text": "Linkedin"
+    },
+    {
+      "text": "Linkedin",
+      "url": "https://www.linkedin.com/company/securemation",
+      "sourceUrl": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net",
+      "pageTitle": "securemation – securemation",
+      "location": {
+        "x": 1423.140625,
+        "y": 8314.453125
+      }
+    },
+    {
+      "url": "https://www.youtube.com/@securemation4009",
+      "text": "Youtube"
+    },
+    {
+      "text": "Youtube",
+      "url": "https://www.youtube.com/@securemation4009",
+      "sourceUrl": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net",
+      "pageTitle": "securemation – securemation",
+      "location": {
+        "x": 1423.140625,
+        "y": 8347.453125
+      }
+    },
+    {
+      "url": "https://www.internetcookies.com/",
+      "text": "internetcookies.com"
+    },
+    {
+      "text": "internetcookies.com",
+      "url": "https://www.internetcookies.com/",
+      "sourceUrl": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/home/privacy-policy",
+      "pageTitle": "Privacy Policy – securemation",
+      "location": {
+        "x": 1019.75,
+        "y": 5341.578125
+      }
+    },
+    {
+      "url": "https://www.termsandconditionsgenerator.com/",
+      "text": "Free Terms and Conditions Generator"
+    },
+    {
+      "text": "Free Terms and Conditions Generator",
+      "url": "https://www.termsandconditionsgenerator.com/",
+      "sourceUrl": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/home/gdpr-cookie-policy",
+      "pageTitle": "GDPR Cookie Policy – securemation",
+      "location": {
+        "x": 959.828125,
+        "y": 1008.15625
+      }
+    },
+    {
+      "url": "https://www.statista.com/statistics/1343645/australia-number-of-cybercrimes-reports-acsc/",
+      "text": "76,000 cybercrime reports made to the Australian Cybersecurity Centre in FY ’22"
+    },
+    {
+      "text": "76,000 cybercrime reports made to the Australian Cybersecurity Centre in FY ’22",
+      "url": "https://www.statista.com/statistics/1343645/australia-number-of-cybercrimes-reports-acsc/",
+      "sourceUrl": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/understanding-cyber-security-risk-management-a-guide-for-australian-businesses",
+      "pageTitle": "Understanding Cyber Security Risk Management: A Guide for Australian Businesses – securemation",
+      "location": {
+        "x": 520.109375,
+        "y": 1083.828125
+      }
+    },
+    {
+      "url": "https://www.cyber.gov.au/sites/default/files/2023-03/ACSC-Annual-Cyber-Threat-Report-2022_0.pdf",
+      "text": "median wealth per adult was highest in the world in 2021"
+    },
+    {
+      "text": "median wealth per adult was highest in the world in 2021",
+      "url": "https://www.cyber.gov.au/sites/default/files/2023-03/ACSC-Annual-Cyber-Threat-Report-2022_0.pdf",
+      "sourceUrl": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/understanding-cyber-security-risk-management-a-guide-for-australian-businesses",
+      "pageTitle": "Understanding Cyber Security Risk Management: A Guide for Australian Businesses – securemation",
+      "location": {
+        "x": 1028.640625,
+        "y": 1397.390625
+      }
+    },
+    {
+      "url": "https://www.securemation.com/",
+      "text": "Securemation"
+    },
+    {
+      "text": "Securemation",
+      "url": "https://www.securemation.com/",
+      "sourceUrl": "https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/understanding-cyber-security-risk-management-a-guide-for-australian-businesses",
+      "pageTitle": "Understanding Cyber Security Risk Management: A Guide for Australian Businesses – securemation",
+      "location": {
+        "x": 351.5,
+        "y": 5124.53125
+      }
+    }
+  ]
+}
