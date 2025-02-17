@@ -1,0 +1,41 @@
+---
+# Basic configuration
+domains:
+  before: https://old.example.com  # URL of the old website
+  after: https://new.example.com   # URL of the new website
+
+# Comparison rules
+rules:
+  - name: "Check if internal links point to the correct pages and titles"
+    type: "link_check"
+    options:
+      internal_only: true  # Only check internal links
+      validate_titles: true  # Verify if the linked page's title matches
+
+  - name: "Compare text content of the same pages between old and new websites"
+    type: "content_diff"
+    options:
+      ignore_whitespace: true  # Ignore whitespace differences
+      ignore_attributes: true  # Ignore differences in HTML tag attributes
+
+# Report configuration
+report:
+  format: html  # Generate report in HTML format
+  output_dir: ./sitediff-report  # Directory to save the report
+  include:
+    - "link_check"  # Include link check results
+    - "content_diff"  # Include content comparison results
+  exclude:
+    - "identical"  # Exclude pages that are completely identical
+
+# Path configuration
+paths:
+  include:
+    - "/"  # Compare all pages under the root path
+  exclude:
+    - "/admin"  # Exclude admin pages
+    - "/private"  # Exclude private pages
+
+# Additional configuration
+concurrency: 5  # Number of concurrent requests
+timeout: 10  # Request timeout in seconds
