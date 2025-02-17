@@ -1,0 +1,14 @@
+FROM openjdk:8-jdk
+
+WORKDIR /app
+
+# 下载并构建 Diffy
+RUN apt-get update && apt-get install -y git curl && \
+    git clone https://github.com/opentable/diffy.git && \
+    cd diffy && \
+    ./gradlew build && \
+    mv build/libs/diffy.jar /app/diffy.jar
+
+EXPOSE 31900
+
+CMD ["java", "-jar", "/app/diffy.jar", "--master=http://old-website.com", "--candidate=http://new-website.com", "--proxy-port=31900"]
