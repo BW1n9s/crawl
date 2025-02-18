@@ -1,25 +1,11 @@
-Feature: Header Navigation Test
-  As a user
-  I want to verify all header navigation links
-  So that I can ensure they are correct and working
+Feature: Link Checker
+  As a website owner
+  I want to check all links on my website
+  So that I can ensure they are working correctly
 
-  Scenario: Verify header navigation items and their links
-    Given I am on the homepage
-    When I check the header navigation
-    Then I should see "<nav_item>" in the header
-    And the link for "<nav_item>" should point to "<expected_url>"
-
-    Examples:
-      | nav_item       | expected_url           |
-      | Home          | /                      |
-      | About         | /about                 |
-      | Services      | /services              |
-      | Blogs         | /blogs                 |
-      | Clients       | /clients               |
-      | Privacy Policy| /privacy-policy        |
-      | Contact Us    | /contact               |
-
-  Scenario: Verify all navigation items are present
-    Given I am on the homepage
-    When I check the header navigation
-    Then I should see all required navigation items
+  Scenario: Check all links on the website
+    Given I am on the homepage of the website
+    When I check all links on the website
+    Then I should see a report of all external links
+    And I should see a report of all blog posts
+    And I should see a report of all social media links

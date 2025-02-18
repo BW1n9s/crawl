@@ -1,0 +1,79 @@
+FROM openjdk:8-jdk
+
+WORKDIR /app
+
+# 下载并构建 Diffy
+RUN apt-get update && apt-get install -y git curl && \
+    git clone https://github.com/opentable/diffy.git && \
+    cd diffy && \
+    ./gradlew build && \
+    mv build/libs/diffy.jar /app/diffy.jar
+
+EXPOSE 31900
+
+CMD ["java", "-jar", "/app/diffy.jar", "--master=http://old-website.com", "--candidate=http://new-website.com", "--proxy-port=31900"]
+
+
+version: "3.9"
+
+services:
+  diffy:
+    build:
+      context: .
+      dockerfile: Dockerfile.diffy
+    container_name: diffy
+    ports:
+      - "31900:31900"
+    networks:
+      - diff-network
+
+  diff2html:
+    build:
+      context: .
+      dockerfile: Dockerfile.diff2html
+    container_name: diff2html
+    volumes:
+      - ./data:/data
+    networks:
+      - diff-network
+    depends_on:
+      - diffy
+    entrypoint: ["/bin/sh", "-c", "sleep 10 && curl -X GET 'http://diffy:31900/diffs' > /data/website_diff.txt && diff2html --input file --file /data/website_diff.txt --output html --output-dir /data/diff_report"]
+
+networks:
+  diff-network:
+    driver: bridge
+
+
+version: '3'
+services:
+  diffy:
+    build: .
+    ports:
+      - "8880:8880"
+    volumes:
+      - ./reports:/app/reports
+    command: >
+      java -jar diffy.jar
+      -candidate=localhost:9992
+      -master.primary=localhost:9990
+      -master.secondary=localhost:9991
+      -service.protocol=http
+      -serviceName="My Web Service"
+      -proxy.port=:8880
+      -admin.port=:8881
+      -http.port=:8888
+      -rootUrl=localhost:8880
+      -summary.email="your-email@example.com"
+      -summary.delay=10
+      -summary.dryRun=true
+      -allowHttpSideEffects=true
+      -excludeHttpHeadersComparison=true
+      -responseMode=primary
+      -enableThrift=false
+      -ui.port=:8880
+
+
+
+
+

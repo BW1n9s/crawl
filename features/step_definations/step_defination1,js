@@ -1,50 +1,51 @@
-const { Given, When, Then } = require('@cucumber/cucumber');
-const { Builder, By, until } = require('selenium-webdriver');
-const { expect } = require('chai');
+const { Given, When, Then, AfterAll } = require('cucumber');
+const { Builder, By } = require('selenium-webdriver');
+const fs = require('fs').promises;
+const path = require('path');
+const { LinkChecker } = require('./link_checker'); // Assuming LinkChecker class is in a separate file
 
 let driver;
-const expectedNavItems = [
-    'Home', 'About', 'Services', 'Blogs', 
-    'Clients', 'Privacy Policy', 'Contact Us'
-];
+let checker;
 
-Given('I am on the homepage', async function() {
+Given('I am on the homepage of the website', async function () {
     driver = await new Builder().forBrowser('chrome').build();
-    await driver.get('https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net/'); 
-    await driver.wait(until.elementLocated(By.css('nav')), 10000);
+    await driver.manage().window().maximize();
+    checker = new LinkChecker('https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net');
+    checker.urlQueue.push(checker.baseUrl);
 });
 
-When('I check the header navigation', async function() {
-    const header = await driver.findElement(By.css('header'));
-    expect(header).to.exist;
+When('I check all links on the website', async function () {
+    while (checker.urlQueue.length > 0) {
+        const url = checker.urlQueue.shift();
+        if (url.includes('/blog') || url.includes('/blogs/')) {
+            await checker.checkBlogPage(url);
+        } else {
+            await checker.checkRegularPage(url);
+        }
+    }
 });
 
-Then('I should see {string} in the header', async function(navItem) {
-    const navElement = await driver.findElement(
-        By.xpath(`//nav//a[contains(text(),'${navItem}')]`)
-    );
-    expect(navElement).to.exist;
+Then('I should see a report of all external links', async function () {
+    await checker.generateReport();
+    const report = JSON.parse(await fs.readFile('link-verification-report.json', 'utf8'));
+    this.externalLinks = report.externalLinks;
+    assert(this.externalLinks.length > 0, 'No external links found');
 });
 
-Then('the link for {string} should point to {string}', async function(navItem, expectedUrl) {
-    const navLink = await driver.findElement(
-        By.xpath(`//nav//a[contains(text(),'${navItem}')]`)
-    );
-    const href = await navLink.getAttribute('href');
-    
-    expect(href).to.include(expectedUrl);
+Then('I should see a report of all blog posts', async function () {
+    const report = JSON.parse(await fs.readFile('link-verification-report.json', 'utf8'));
+    this.blogPosts = report.blogPosts;
+    assert(this.blogPosts.length > 0, 'No blog posts found');
 });
 
-Then('I should see all required navigation items', async function() {
-    const navItems = await driver.findElements(By.css('nav a'));
-    const navTexts = await Promise.all(
-        navItems.map(item => item.getText())
-    );
-    expectedNavItems.forEach(item => {
-        expect(navTexts).to.include(item);
-    });
+Then('I should see a report of all social media links', async function () {
+    const report = JSON.parse(await fs.readFile('link-verification-report.json', 'utf8'));
+    this.socialLinks = report.socialLinks;
+    assert(this.socialLinks.length > 0, 'No social media links found');
+});
 
-    expect(navTexts.length).to.equal(expectedNavItems.length);
-    
-    await driver.quit();
+AfterAll(async function () {
+    if (driver) {
+        await driver.quit();
+    }
 });
