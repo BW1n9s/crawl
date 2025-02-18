@@ -197,7 +197,8 @@ async function runLinkCheck() {
         driver = await new Builder().forBrowser('chrome').build();
         await driver.manage().window().maximize();
 
-        const checker = new LinkChecker('https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net');
+        // const checker = new LinkChecker('https://sm-wp2-dufgdjbuh8h3fqhs.australiaeast-01.azurewebsites.net');
+        const checker = new LinkChecker('https://www.securemation.com');
         checker.urlQueue.push(checker.baseUrl);
 
         while (checker.urlQueue.length > 0) {
