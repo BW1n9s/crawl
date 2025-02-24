@@ -1,0 +1,76 @@
+const { Builder, By, until } = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
+
+(async function () {
+    // Set Chrome options
+    let options = new chrome.Options();
+    options.addArguments('--headless'); // Run in headless mode
+    options.addArguments('--no-sandbox');
+    options.addArguments('--disable-dev-shm-usage');
+
+    // Initialize WebDriver
+    let driver = await new Builder()
+        .forBrowser('chrome')
+        .setChromeOptions(options)
+        .build();
+
+    try {
+        // Open the target webpage
+        await driver.get('https://example.com'); // Replace with your target URL
+
+        // Wait for the page to load completely
+        await driver.wait(until.elementLocated(By.css('body')), 10000); // Wait for the body tag
+
+        // Use JavaScript to extract interactive elements and their content
+        let result = await driver.executeScript(`
+            // Select all interactive elements (inputs, buttons, selects, etc.)
+            const interactiveElements = document.querySelectorAll(
+                'input, textarea, select, button, a, [role="button"], [role="menu"], [role="listbox"]'
+            );
+
+            const result = [];
+
+            // Loop through each interactive element
+            interactiveElements.forEach(element => {
+                const id = element.id || 'N/A'; // Get the ID (if available)
+                let content = '';
+
+                // Extract content based on element type
+                switch (element.tagName.toLowerCase()) {
+                    case 'input':
+                    case 'textarea':
+                        content = element.value || element.placeholder || 'N/A'; // Get value or placeholder
+                        break;
+                    case 'select':
+                        // Get the selected option text for dropdowns
+                        content = element.options[element.selectedIndex]?.text || 'N/A';
+                        break;
+                    case 'button':
+                    case 'a':
+                        // Get the text content for buttons and links
+                        content = element.textContent.trim() || 'N/A';
+                        break;
+                    default:
+                        // For other elements, try to get text content or aria-label
+                        content = element.textContent.trim() || element.getAttribute('aria-label') || 'N/A';
+                }
+
+                // Add the result to the array
+                result.push({ id, content, tagName: element.tagName.toLowerCase() });
+            });
+
+            return result; // Return the result as an array of objects
+        `);
+
+        // Print the results
+        console.log('Interactive Elements:');
+        result.forEach(item => {
+            console.log(`Tag: ${item.tagName}, ID: ${item.id}, Content: ${item.content}`);
+        });
+    } catch (error) {
+        console.error('An error occurred:', error);
+    } finally {
+        // Close the browser
+        await driver.quit();
+    }
+})();
