@@ -1,0 +1,42 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+import json
+
+# 设置 Chrome 选项
+options = webdriver.ChromeOptions()
+options.add_argument('--headless')  # 无头模式
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-dev-shm-usage')
+
+# 初始化 WebDriver
+driver = webdriver.Chrome(service=Service('/usr/bin/chromedriver'), options=options)
+
+# 打开目标网页
+url = 'https://example.com'  # 替换为目标网页的 URL
+driver.get(url)
+
+# 使用 JavaScript 获取所有互动元素的 id 和 content
+script = """
+const interactiveElements = document.querySelectorAll('[id]');
+const result = [];
+interactiveElements.forEach(element => {
+    const id = element.id;
+    const content = element.textContent || element.value || element.placeholder || '';
+    result.push({ id, content });
+});
+return JSON.stringify(result);
+"""
+
+# 执行 JavaScript 脚本
+result_json = driver.execute_script(script)
+
+# 将结果解析为 Python 字典
+result = json.loads(result_json)
+
+# 打印结果
+for item in result:
+    print(f"ID: {item['id']}, Content: {item['content']}")
+
+# 关闭浏览器
+driver.quit()
